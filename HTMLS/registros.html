@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <title>AirInsight</title>
+</head>
+
+<body onload="gerarRegistros()">
+    <header class="flexbox-header">
+        <div class="header-nome">AirInsight</div>
+        <div class="header-options">
+            <a href="../index.html">INÍCIO</a>
+        </div>
+    </header>
+    <div class="tabela-amostras" id="tabela-amostras">
+        <table id="demTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>MP10</th>
+                    <th>MP2.5</th>
+                    <th>O3</th>
+                    <th>CO</th>
+                    <th>SO2</th>
+                    <th>NO2</th>
+                </tr>
+            </thead>
+            <tbody class="corpo-tabela" id="corpo-tabela">
+            </tbody>
+        </table>
+    </div>
+    <div class="container-buttons">
+        <select class="form-select" onchange="attInputs()" name="amostras" id="select-amostras">
+            <option value="null">SELECIONE O ID</option>
+        </select>
+        <button class="btn btn-warning alterarAmostra" onclick="alterarAmostra()">ALTERAR</button>
+        <button class="btn btn-danger deletarAmostra" onclick="deletarAmostra()">DELETAR</button>
+    </div>
+    <div class="dadosAmostra">
+        <p>MP10<input type="number" value="" id="valor-mp10"></p>
+        <p>MP25<input type="number" value="" id="valor-mp25"></p>
+        <p>O3<input type="number" value="" id="valor-o3"></p>
+        <p>CO<input type="number" value="" id="valor-co"></p>
+        <p>NO2<input type="number" value="" id="valor-no2"></p>
+        <p>SO2<input type="number" value="" id="valor-so2"></p>
+    </div>
+</body>
+
+</html>
