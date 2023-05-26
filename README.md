@@ -8,3 +8,4 @@ PARA INICIAR O SERVIDOR :
         python -m flask run
     
 CASO NÃO RODAR DIRETAMENTE, NECESSÁRIO INSTALAR AS DEPENDENCIAS DO FLASK.# AirInsight-Project
+# AirInsight-Project
